@@ -9,8 +9,8 @@ input[type=number] {
 
 input[type=number]::-webkit-inner-spin-button,
 input[type=number]::-webkit-outer-spin-button { 
-      -webkit-appearance: none; 
-      margin: 0; 
+    -webkit-appearance: none; 
+    margin: 0; 
 }
 
 .input{
@@ -62,6 +62,6 @@ input[type=number]::-webkit-outer-spin-button {
     display: flex;
     flex-direction: column;
     gap: .5rem;
-    overflow-y: scroll;
+    overflow-y: auto;
     max-height: 35vh;
 }

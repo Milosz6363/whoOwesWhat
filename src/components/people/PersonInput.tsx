@@ -12,13 +12,13 @@ const PersonInput: FC = () => {
 
     const addPerson = (e: FormEvent) => {
         e.preventDefault()
-        if (nameInput.current.value === undefined) return alert('Person has to have a name')
+        if (nameInput.current.value === (undefined || null)) return alert('Person has to have a name')
         let paid = Number(numberInput.current.value)
         if (paid === undefined) 
             paid = 0 
         dispatch(updatePeople([
-            ...people,
-            new Person(Date.now(), nameInput.current.value, paid)
+            { _id:Date.now(), name: nameInput.current.value, paid:paid, debts: []},
+            ...people
         ]))
         nameInput.current.value = ''
         numberInput.current.value = ''

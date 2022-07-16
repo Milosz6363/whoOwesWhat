@@ -1,0 +1,49 @@
+@import './variables.scss';
+@import './index.scss';
+
+.person{
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5rem;
+}
+
+.person__left, .person__right{
+    display: flex;
+    gap: 0.5rem;
+    font-size: 1rem;
+}
+
+
+.person__input{
+    display: flex;
+    width: 100%;
+}
+
+.person__input > * {
+    border: 2px solid $clr__burnishedBrown;
+}
+
+.person__inputLeft, .person__inputMiddle{
+    padding: 1rem;
+    font-family: $font__DMSans;
+}
+
+.person__inputLeft{
+    width: 50%;
+    border-radius: .5rem 0 0 .5rem;
+}
+
+.person__inputMiddle{
+    width: 30%;
+    border-left: none;
+    border-radius: 0;
+}
+
+.person__inputRight{
+    width: 20%;
+    border: 2px solid $clr__pacificBlue;
+    border-left: none;
+    color: $clr__pacificBlue;
+    background: white;
+    border-radius: 0 .5rem .5rem 0;
+}

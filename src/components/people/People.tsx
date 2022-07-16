@@ -7,7 +7,7 @@ import PersonInput from './PersonInput'
 
 const People = () => {
   const people = useSelector(fetchPeople)
-  
+
   return (
     <div className="contentCard">
       <div className="contentCard__top">
@@ -15,9 +15,9 @@ const People = () => {
         <div className="contentCard__input">
           <PersonInput />
           <div className="contentCard__peopleDisplay">
-          {people.map(person => (
-            <PersonDisplay person={person} />
-          ))}
+            {people.map(person => (
+              <PersonDisplay person={person} />
+            ))}
           </div>
         </div>
       </div>
