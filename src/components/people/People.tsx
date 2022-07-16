@@ -14,10 +14,11 @@ const People = () => {
         <h1 className='contentCard__title'>Add people here.</h1>
         <div className="contentCard__input">
           <PersonInput />
-          <div className="contentCard__peopleDisplay"></div>
+          <div className="contentCard__peopleDisplay">
           {people.map(person => (
             <PersonDisplay person={person} />
           ))}
+          </div>
         </div>
       </div>
       <div className="contentCard__bottom">

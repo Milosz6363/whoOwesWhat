@@ -42,6 +42,7 @@ input[type=number]::-webkit-outer-spin-button {
 
 .input__middle{
     width: 30%;
+    border-radius: 0;
 }
 
 .input__right{
@@ -50,4 +51,17 @@ input[type=number]::-webkit-outer-spin-button {
     background-color: $clr__middleBlue;
     color: $clr__pacificBlue;
     padding: 0;
+}
+.contentCard__input{
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.contentCard__peopleDisplay {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+    overflow-y: scroll;
+    max-height: 35vh;
 }
