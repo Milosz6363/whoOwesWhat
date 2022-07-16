@@ -1,0 +1,53 @@
+@import './_variables.scss';
+@import './index.scss';
+
+input[type=number] { 
+    -moz-appearance: textfield;
+    appearance: textfield;
+    margin: 0; 
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button { 
+      -webkit-appearance: none; 
+      margin: 0; 
+}
+
+.input{
+    display: flex
+}
+
+.input > *{
+    padding: 1rem;
+    border: none;
+    font-family: $font__DMSans;
+}
+
+.input__left, .input__middle{
+    background-color: $clr__isabelline;
+    color: $clr__burnishedBrown;
+}
+
+.input__left:focus, .input__middle:focus{
+    background-color: $clr__timberwolf;
+    color: black;
+    outline: none;
+}
+
+.input__left{
+    width: 50%;
+    border-right: 2px solid $clr__burnishedBrownLight;
+    border-radius: .5rem 0 0 .5rem;
+}
+
+.input__middle{
+    width: 30%;
+}
+
+.input__right{
+    width: 20%;
+    border-radius: 0 .5rem .5rem 0;
+    background-color: $clr__middleBlue;
+    color: $clr__pacificBlue;
+    padding: 0;
+}

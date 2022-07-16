@@ -1,0 +1,30 @@
+@import './_variables';
+@import './index.scss';
+
+.navbar{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background: white;
+    display: flex;
+    justify-content: space-evenly;
+    list-style: none;
+    font-size: $fSize__middle;
+    padding: 0.4rem;
+}
+
+.navbar__item{
+    padding: .6rem;
+    color: $clr__silverPink;
+    cursor: pointer;
+    border-radius: .5rem;
+    transition: all .1s ease-in;
+}
+
+.navbar__item:hover{
+    background-color: $clr__isabelline;
+}
+
+.navbar__item.navbar__itemActive{
+    color: $clr__orangePeel
+}

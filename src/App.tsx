@@ -1,24 +1,23 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from 'react';
+import { useSelector } from 'react-redux';
+import Intro from './components/intro/Intro';
+import People from './components/people/People';
+import Summary from './components/summary/Summary';
+import Navbar from './components/_shared/Navbar';
+import { fetchPage, Pages } from './store/pageSlice';
+import './styles/app.scss';
 
 function App() {
+
+  const currentPage = useSelector(fetchPage)
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="app">
+      <div className="app__content">
+        {currentPage === Pages.intro ? <Intro /> : ''}
+        {currentPage === Pages.people ? <People /> : ''}
+        {currentPage === Pages.summary ? <Summary /> : ''}
+      </div>
+      <Navbar />
     </div>
   );
 }

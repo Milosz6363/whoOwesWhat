@@ -1,0 +1,65 @@
+@import './_variables.scss';
+@import './index.scss';
+
+.app{
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+}
+
+.app__content {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;   
+}
+
+.contentCard {
+    padding: 2rem;
+    background: white;
+    border-radius: .5rem;
+    width: 100%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.contentCard__top{
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+}
+
+.contentCard__title {
+    font-size: $fSize__large;
+    margin-bottom: .5rem;
+}
+
+.contentCard__top p{
+    font-size: $fSize__base;
+    max-width: 45ch;
+}
+
+.contentCard__bottom{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.contentCard__submit{
+    background: $clr__pacificBlue;
+    border: none;
+    padding: 1rem 1.5rem;
+    font-size: $fSize__base;
+    color: white;
+    border-radius: .5rem;
+    font-family: $font__DMSans;
+    transition: all .1s ease-in;
+}
+
+.contentCard__submit:hover{
+    background-color: $clr__ming;
+}
