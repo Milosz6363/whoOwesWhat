@@ -8,6 +8,10 @@ import PersonInput from './PersonInput'
 const People = () => {
   const people = useSelector(fetchPeople)
 
+  const goToSummary = () => {
+    if (people.length === 0) return alert('You have to add people to resolve debts')
+    else if (people.length === 1) return alert('Seriously? You want to resolve debt you have to Yourself? Add more people')
+  }
   return (
     <div className="contentCard">
       <div className="contentCard__top">
@@ -16,13 +20,13 @@ const People = () => {
           <PersonInput />
           <div className="contentCard__peopleDisplay">
             {people.map(person => (
-              <PersonDisplay person={person} />
+              <PersonDisplay key={person._id} person={person} />
             ))}
           </div>
         </div>
       </div>
       <div className="contentCard__bottom">
-        <button className="contentCard__submit">Reveal your debts</button>
+        <button className="contentCard__submit" onClick={goToSummary}>Reveal your debts</button>
       </div>
     </div>
   )

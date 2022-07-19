@@ -15,6 +15,7 @@ const Navbar = () => {
         <li 
           className={`navbar__item ${pg === page ? 'navbar__itemActive' : ''}`}
           onClick={() => dispatch(setPage(pg))}
+          key={pg}
         >
          {pg} 
         </li>
