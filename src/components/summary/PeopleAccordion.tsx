@@ -32,7 +32,7 @@ const PeopleAccordion: FC<Props> = ({ person, collapsed, callback }) => {
             </thead>
             <tbody>
               {person.debts.map(debt => (
-                <tr>
+                <tr key={debt._id}>
                   <td>{debt.name}</td>
                   <td>{debt.amount}</td>
                 </tr>

@@ -8,32 +8,7 @@ export interface PeopleState{
 }
 
 const initialState: PeopleState = {
-    value: [
-        {
-            _id: 0,
-            name: 'Michał',
-            paid: 40,
-            debts: []
-        },
-        {
-            _id: 1,
-            name: 'Agata',
-            paid: 20,
-            debts: []
-        },
-        {
-            _id: 2,
-            name: 'Karolina',
-            paid: 8,
-            debts: []
-        },
-        {
-            _id: 3,
-            name: 'Wiktor',
-            paid: 4,
-            debts: []
-        },
-    ]
+    value: []
 }
 
 export const peopleSlice = createSlice({

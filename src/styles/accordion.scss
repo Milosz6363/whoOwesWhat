@@ -1,4 +1,4 @@
-@import './variables.scss';
+@import './_variables.scss';
 @import './index.scss';
 
 .contentCard__accordion{
@@ -22,12 +22,63 @@
 .accordion__content.accordion__contentCollapsed {
     max-height: 0;
     overflow: hidden;
-    transition: all 0.5s cubic-bezier(0, 1, 0, 1)
+    transition: max-height 0.5s cubic-bezier(0, 1, 0, 1);
 }
 
 .accordion__content{
-    
     height: auto;
     max-height: 9999px;
-    transition: all 1s ease-in;
+    transition: max-height 1s ease-in;
+    display: flex;
+    flex-direction: column;
+}
+
+.accordion__content > p{
+    text-align: center;
+    margin: .5rem;
+}
+
+
+.accordion__content > table{
+    margin: .5rem;
+    border-collapse: collapse;
+}
+
+.accordion__content > table > thead{
+    background: $clr__isabelline;
+}
+
+
+td, th {
+    padding: .2rem;
+    text-align: center;
+}
+
+.accordion__content thead th:first-child{
+    border-top-left-radius: .5rem;
+    
+}
+.accordion__content thead th:last-child{
+    border-top-right-radius: .5rem;
+    border-left: 2px solid $clr__burnishedBrownLight;
+}
+
+.accordion__content tbody tr:nth-child(even){
+    background-color: $clr__snow;
+}
+
+.accordion__content tbody td{
+    border-top: 2px solid $clr__burnishedBrownLight;
+}
+
+.accordion__content tbody td:last-child{
+    border-left: 2px solid $clr__burnishedBrownLight;
+}
+
+.accordion__content tbody tr:last-child td:first-child{
+    border-bottom-left-radius: .5rem;
+}
+
+.accordion__content tbody tr:last-child td:last-child{
+    border-bottom-right-radius: .5rem; 
 }

@@ -17,7 +17,7 @@ export const evaluateDebt = (person: Person, creditor: Creditor, peopleLen: numb
     const difference = (creditor.paid/peopleLen) - (person.paid/peopleLen)
     if (difference <= 0) return null
     else {
-        creditor.amount = difference
+        creditor.amount = (Math.round(difference * 100) / 100)
         return creditor
     }
 }

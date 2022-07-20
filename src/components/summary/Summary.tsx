@@ -15,8 +15,8 @@ const Summary = () => {
       <div className="contentCard__top">
         <h1 className="contentCard__title">Summary.</h1>
         <div className="contentCard__accordion">
-          {people.map(person => (
-            <PeopleAccordion person={person} collapsed={person._id !== currentPerson?._id} callback={() => {
+          {people.map((person: Person) => (
+            <PeopleAccordion key={person._id} person={person} collapsed={person._id !== currentPerson?._id} callback={() => {
               if (currentPerson?._id === person._id) setCurrentPerson(undefined)
               else setCurrentPerson(person)}
             }/>

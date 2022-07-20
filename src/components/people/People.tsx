@@ -1,13 +1,13 @@
-import React from 'react'
+import React, { FC } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import { creditorFromPerson, evaluateDebt } from '../../data'
+import { creditorFromPerson, evaluateDebt, Person } from '../../data'
 import { Pages, setPage } from '../../store/pageSlice'
 import { editPerson, fetchPeople } from '../../store/peopleSlice'
 import '../../styles/people.scss'
 import PersonDisplay from './PersonDisplay'
 import PersonInput from './PersonInput'
 
-const People = () => {
+const People:FC = () => {
   const people = useSelector(fetchPeople)
   const dispatch = useDispatch()
 
@@ -40,7 +40,7 @@ const People = () => {
         <div className="contentCard__input">
           <PersonInput />
           <div className="contentCard__peopleDisplay">
-            {people.map(person => (
+            {people.map((person: Person) => (
               <PersonDisplay key={person._id} person={person} />
             ))}
           </div>
