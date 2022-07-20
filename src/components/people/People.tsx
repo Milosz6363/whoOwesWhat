@@ -17,11 +17,9 @@ const People = () => {
     else if (people.length === 1) return alert('Seriously? You want to resolve debt you have to Yourself? Add more people')
 
     people.forEach(person => { 
-      console.log(person)
       let debts = people.filter(prsn => prsn._id !== person._id).map(prsn => creditorFromPerson(prsn))
       debts.map(debt => evaluateDebt(person, debt, people.length))
       debts = debts.filter(debt => debt.amount !== undefined)
-      console.log(person.name, debts)
       dispatch(editPerson([
         person,
         {
