@@ -1,0 +1,33 @@
+@import './variables.scss';
+@import './index.scss';
+
+.contentCard__accordion{
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+    overflow-y: auto;
+    max-height: 40vh;
+}
+
+.accordion{
+    display: flex;
+    flex-direction: column;
+}
+
+.accordion__header{
+    display: flex;
+    justify-content: space-between;
+}
+
+.accordion__content.accordion__contentCollapsed {
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.5s cubic-bezier(0, 1, 0, 1)
+}
+
+.accordion__content{
+    
+    height: auto;
+    max-height: 9999px;
+    transition: all 1s ease-in;
+}

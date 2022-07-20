@@ -13,7 +13,7 @@ export interface PageState{
 }
 
 const initialState: PageState = {
-    value: Pages.intro
+    value: Pages.people
 }
 
 export const pageSlice = createSlice({

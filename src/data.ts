@@ -5,16 +5,19 @@ export interface Person {
     debts: Creditor[]
 }
 
-export const addCreditors = (person: Person, creditors: Person[]): void => {
-    creditors.forEach(creditor => {
-        person.debts = [...person.debts, creditorFromPerson(creditor)]
-    })
-}
-
 export interface Creditor extends Person {
     amount: number | undefined
 }
 
 export const creditorFromPerson = (person: Person): Creditor => {
     return {...person, amount: undefined}
+}
+
+export const evaluateDebt = (person: Person, creditor: Creditor, peopleLen: number): Creditor | null => {
+    const difference = (creditor.paid/peopleLen) - (person.paid/peopleLen)
+    if (difference <= 0) return null
+    else {
+        creditor.amount = difference
+        return creditor
+    }
 }
